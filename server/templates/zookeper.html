@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zookeeper Information</title>
+</head>
+<body>
+    <h1>Zookeeper Information</h1>
+    <ul>
+        <li>Name: {{ zookeeper.name }}</li>
+        <li>Birthday: {{ zookeeper.birthday }}</li>
+        <li>Animals under care:
+            <ul>
+                {% for animal in zookeeper.animals %}
+                    <li>{{ animal.name }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
